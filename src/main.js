@@ -1,0 +1,40 @@
+import Vue from 'vue'
+import App from './App.vue'
+import VueResource from 'vue-resource'
+import VueRouter from 'vue-router'
+import Routes from './routers'
+
+Vue.use(VueResource);
+Vue.use(VueRouter);
+
+const router = new VueRouter({
+  routes: Routes,
+  mode:'history'
+});
+
+Vue.directive('theme',{
+  bind(el,binding,vnode){
+    if (binding.value == 'wide'){
+      el.style.maxWidth= "1200px";
+    } else if (binding.value == 'narrow'){
+      el.style.maxWidth = "600px";
+    }
+    if (binding.arg == "column"){
+      el.style.background = "#ccc";
+      el.style.padding = '20px';
+    }
+  }
+});
+
+// filters
+
+Vue.filter('sinppet',function(value){
+  return value.slice(0,100) + '...';
+});
+
+
+new Vue({
+  el: '#app',
+  render: h => h(App),
+  router: router
+})
