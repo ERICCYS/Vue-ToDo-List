@@ -20,7 +20,7 @@
       <select v-model="list.author">
         <option v-for="author in authors">{{ author }}</option>
       </select>
-      <button v-on:click.prevent="post">Add the list</button>
+      <button class="add-post" v-on:click.prevent="post">Add the list</button>
     </form>
     <div v-if="submitted">
       <h3>Thanks for Submitting</h3>
@@ -71,7 +71,8 @@ export default {
 }
 #add-list {
   margin: 20px auto;
-  max-width: 500px;
+  max-width: 800px;
+  font-family: 'Mali', cursive;
 }
 label {
   display: block;
@@ -83,15 +84,24 @@ input[type='text'], textarea {
   padding: 8px;
 }
 form{
-  font-size: 16px;
+  font-size: 20px;
 }
 
 select {
   width: 150px !important;
+  height: 35px;
 }
 
+.add-post {
+  height: 35px;
+  font-size: 20px;
+  background-color: skyblue;
+  font-family: 'Mali', cursive;
+  border-width: 3px;
+  border-radius: 3px;
+}
 #preview {
-  font-size: 16px;
+  font-size: 20px;
   padding: 10px 20px;
   border: 1px dotted #ccc;
   margin: 30px 0;
@@ -99,11 +109,25 @@ select {
 h3{
   margin-top: 10px;
 }
-#checkboxes input{
-  display: inline-block;;
-  margin-right: 10px;
+#checkboxes {
+  /* align-items: center; */
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#checkboxes input {
+  display: inline-block;
+  width: 5%;
+  height: 30px;
+  align-items: left;
+  /* font-size: 18px; */
 }
 #checkboxes label {
   display: inline-block;
+  text-align: center;
+  width: 15%;
+  height: 30px;
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
 }
 </style>

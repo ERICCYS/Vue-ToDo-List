@@ -15,12 +15,12 @@ const router = new VueRouter({
 Vue.directive('theme',{
   bind(el,binding,vnode){
     if (binding.value == 'wide'){
-      el.style.maxWidth= "1200px";
+      el.style.maxWidth= "1000px";
     } else if (binding.value == 'narrow'){
-      el.style.maxWidth = "600px";
+      el.style.maxWidth = "800px";
     }
     if (binding.arg == "column"){
-      el.style.background = "#ccc";
+      el.style.background = "#dedede";
       el.style.padding = '20px';
     }
   }

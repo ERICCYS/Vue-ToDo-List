@@ -1,7 +1,7 @@
 <template>
   <div v-theme:column="'wide'" id='show-lists'>
-    <h1>All to do lists</h1>
-    <input type='text' v-model='search' placeholder="Search"/>
+    <h1>All to do lists for Eric</h1>
+    <input class="search" type='text' v-model='search' placeholder="Search for a to do list..."/>
     <div v-for="list in filteredLists" class="single-list">
       <router-link v-bind:to="'/list/' + list.id">
         <h2 v-rainbow>{{list.title | to-uppercase}}</h2>
@@ -63,12 +63,27 @@ export default {
 #show-lists{
   max-width: 800px;
   margin: 0 auto;
+  font-family: 'Mali', cursive;
   /* margin: 0 auto will make the output centrallize on the page */
+}
+input{
+  width: 100%;
+  height: 25px;
+  font-family:  'Mali', cursive;
+  font-size: 20px;
 }
 .single-list{
   padding: 20px;
   margin:  20px 0;
   box-sizing: border-box;
   background: #eee;
+}
+.single-list h2{
+  margin-top:10px;
+  font-size: 30px;
+}
+.single-list article{
+  margin-top:10px;
+  font-size: 20px;
 }
 </style>

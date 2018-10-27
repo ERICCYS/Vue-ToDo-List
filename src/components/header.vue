@@ -17,10 +17,15 @@ ul{
     list-style-type: none;
     text-align: center;
     margin: 0;
+    height: 50px;
+    vertical-align: center;
 }
 li{
     display: inline-block;
     margin: 0 10px;
+    margin-top: 10px;
+    font-size: 26px;
+    font-family: 'Mali', cursive;
 }
 a{
     color: #fff;
@@ -29,9 +34,10 @@ a{
     border-radius: 10px;
 }
 nav{
-    background: #444;
+    background: skyblue;
     padding: 14px 0;
     margin-bottom: 40px;
+    height: 50px;
 }
 .router-link-active{
     background: #eee;

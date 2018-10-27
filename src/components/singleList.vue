@@ -33,8 +33,9 @@ export default{
 
 <style>
 #single-list{
-    max-width: 960px;
+    max-width: 800px;
     margin-left: 300px;
     align-items: center;
+    font-family: 'Mali', cursive;
 }
 </style>
