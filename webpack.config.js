@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: '/Vue-ToDoList/',
     filename: 'build.js'
   },
   module: {
@@ -43,7 +43,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['*', '.js', '.vue', '.json']
+    // extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,
