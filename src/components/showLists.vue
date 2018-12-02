@@ -3,7 +3,7 @@
     <h1>All to do lists for Eric</h1>
     <input class="search" type='text' v-model='search' placeholder="Search for a to do list..."/>
     <div v-for="list in filteredLists" class="single-list">
-      <router-link v-bind:to="'/list/' + list.id">
+      <router-link v-bind:to="'/Vue-ToDoList/list/' + list.id">
         <h2 v-rainbow>{{list.title | to-uppercase}}</h2>
       </router-link>
       <article>
