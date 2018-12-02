@@ -1,8 +1,8 @@
 <template>
   <nav>
     <ul>
-      <li><router-link to="/Vue-ToDoList/" exact>To Do List For Eric</router-link></li>
-      <li><router-link to="/Vue-ToDoList/add" exact>Let Eric Do Something</router-link></li>
+      <li><router-link to="/" exact>To Do List For Eric</router-link></li>
+      <li><router-link to="/add" exact>Let Eric Do Something</router-link></li>
     </ul>
   </nav>
 </template>
