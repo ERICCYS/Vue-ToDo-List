@@ -19,6 +19,9 @@ git commit -m 'deploy'
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:MAXI0008/Vue-ToDo-List.git master:gh-pages
+# git push -f git@github.com:MAXI0008/Vue-ToDo-List.git master:gh-pages
+git remote add origin https://github.com/MAXI0008/Vue-ToDo-List.git
+git push -f origin master:gh-pages
+
 
 cd -
